@@ -28,16 +28,3 @@ while true; do
     esac
     echo
 done
-
-B
-B
-A
-A
-A
-A
-A
-A
-A
-A
-A
-done 
