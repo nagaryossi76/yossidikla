@@ -49,22 +49,3 @@ This project is licensed under the MIT License.
 ## Author
 Created by [Yossi&Dikla ]
 
-
-
-
-
-
-
-
-
-B
-A
-A
-A
-A
-A
-A
-A
-A
-A
-
