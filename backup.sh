@@ -1,30 +1,18 @@
 #!/bin/bash
+echo "נא להזין את נתיב התקייה לגיבוי:"
+read source_folder
 
-while true; do
-    echo "*********Select an option************:"
-    echo "1. Show the date"
-    echo "2. Show the time"
-    echo "3. Show the user name"
-    echo "4. Exit"
-    read -p "Enter your choice [1-4]: " choice
+echo "נא להזין את נתיב תקיית היעד לגיבוי:"
+read backup_folder
 
-    case $choice in
-        1)
-            echo "Current date: $(date +"%Y-%m-%d")"
-            ;;
-        2)
-            echo "Current time: $(date +"%H:%M:%S")"
-            ;;
-        3)
-            echo "User name: $USER"
-            ;;
-        4)
-            echo "Exiting. Goodbye!"
-            break
-            ;;
-        *)
-            echo "Invalid option. Please choose 1-4."
-            ;;
-    esac
-    echo
-done
+# יצירת שם גיבוי עם תאריך ושעה
+timestamp=$(date +%Y%m%d_%H%M%S)
+destination="$backup_folder/backup_$timestamp"
+
+echo "יוצר גיבוי ב: $destination"
+mkdir -p "$destination"
+cp -r "$source_folder" "$destination"
+
+echo "הגיבוי הסתיים בהצלחה!"
+
+
