@@ -7,7 +7,7 @@ read startdatetime
 
 echo "Your Start Date&Time is : $startdatetime"
 TODAY=$(date +%Y-%m-%d)
-TIME= $(date +%H-%M-%S)
+TIME= $(date +"%H:%M:%S")
 
 echo "Today is $TODAY and The Time is $TIME"
 
