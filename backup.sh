@@ -5,6 +5,8 @@ echo "**********Create a backup of a folder at a date and time you choose*******
 echo "Please enter a date and time (format: YYYY-MM-DD HH:MM):"
 read datetime
 
+echo "you enter $datetime
+
 # Define the backup directory path
 DESKTOP_DIR="$HOME/Desktop/BACKUP"
 
