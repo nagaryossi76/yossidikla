@@ -7,6 +7,8 @@ read startdatetime
 
 echo "Your Start Date&Time is : $startdatetime"
 TODAY=$(date +%Y-%m-%d)
+TIME=$(time +%HH-%MM)
+
 echo "Today is $TODAY"
 
 # Define the backup directory path
