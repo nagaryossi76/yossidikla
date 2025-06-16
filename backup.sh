@@ -1,19 +1,8 @@
 #!/bin/bash
-echo "Test"
-echo "נא להזין את נתיב התקייה לגיבוי:"
-read source_folder
 
-echo "נא להזין את נתיב תקיית היעד לגיבוי:"
-read backup_folder
+DESKTOP_DIR="$HOME/Desktop/BACKUP"
 
-# יצירת שם גיבוי עם תאריך ושעה
-timestamp=$(date +%Y%m%d_%H%M%S)
-destination="$backup_folder/backup_$timestamp"
-
-echo "יוצר גיבוי ב: $destination"
-mkdir -p "$destination"
-cp -r "$source_folder" "$destination"
-
-echo "הגיבוי הסתיים בהצלחה!"
-
-
+if [ ! -d "$DESKTOP_DIR" ]; then
+    echo "יוצר תיקיית גיבוי ב-$DESKTOP_DIR..."
+    mkdir -p "$DESKTOP_DIR"
+    echo "נוצרה תיקיית גיבוי"
