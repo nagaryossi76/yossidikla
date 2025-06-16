@@ -1,11 +1,16 @@
 #!/bin/bash
 
 echo "**********Create a backup of a folder at a date and time you choose**********"
-# Prompt user to enter the start date and time (format: YYYY-MM-DD HH:MM)
-echo "Please enter The Start date and time (format: YYYY-MM-DD HH:MM):"
-read startdatetime
+# Prompt user to enter the start date (format: YYYY-MM-DD)
+echo "Please enter The Start date (format: YYYY-MM-DD):"
+read startdate
+# Prompt user to enter the start time (format: HH:MM)
+echo "Please enter The Start time (format: HH:MM):"
+read starttime
 
-echo "Your Start Date&Time is : $startdatetime"
+echo "Your Start Date is : $startdate"
+echo "Your Start time is : $starttime"
+
 current_date=$(date +%Y-%m-%d)
 current_time=$(date +"%H:%M:%S")
 
