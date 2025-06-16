@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Test"
 echo "נא להזין את נתיב התקייה לגיבוי:"
 read source_folder
 
