@@ -2,10 +2,12 @@
 
 echo "**********Create a backup of a folder at a date and time you choose**********"
 # Prompt user to enter a date and time (format: YYYY-MM-DD HH:MM)
-echo "Please enter a date and time (format: YYYY-MM-DD HH:MM):"
-read datetime
+echo "Please enter The Start date and time (format: YYYY-MM-DD HH:MM):"
+read startdatetime
 
-echo "you enter $datetime"
+echo "Your Start Date&Time is : $startdatetime"
+TODAY=$(date +%Y-%m-%d)
+echo "Today is $TODAY"
 
 # Define the backup directory path
 DESKTOP_DIR="$HOME/Desktop/BACKUP"
