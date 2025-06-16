@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "**********Create a backup of a folder at a date and time you choose**********"
-# Prompt user to enter a date and time (format: YYYY-MM-DD HH:MM)
+# Prompt user to enter the start date and time (format: YYYY-MM-DD HH:MM)
 echo "Please enter The Start date and time (format: YYYY-MM-DD HH:MM):"
 read startdatetime
 
