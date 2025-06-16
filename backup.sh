@@ -6,10 +6,10 @@ echo "Please enter The Start date and time (format: YYYY-MM-DD HH:MM):"
 read startdatetime
 
 echo "Your Start Date&Time is : $startdatetime"
-TODAY=$(date +%Y-%m-%d)
+current_date=$(date +%Y-%m-%d)
 current_time=$(date +"%H:%M:%S")
 
-echo "Today is $TODAY and The Time is $current_time"
+echo "Today is $current_date and The Time is $current_time"
 
 # Define the backup directory path
 DESKTOP_DIR="$HOME/Desktop/BACKUP"
