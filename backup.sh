@@ -12,7 +12,7 @@ echo "Your Start Date is : $startdate"
 echo "Your Start time is : $starttime"
 
 current_date=$(date +%Y-%m-%d)
-current_time=$(date +"%H:%M:%S")
+current_time=$(date +"%H:%M")
 
 echo "Today is $current_date and The Time is $current_time"
 
