@@ -9,7 +9,7 @@ echo "Your Start Date&Time is : $startdatetime"
 TODAY=$(date +%Y-%m-%d)
 TIME=$(time +%HH-%MM)
 
-echo "Today is $TODAY"
+echo "Today is $TODAY and The Time is $TIME"
 
 # Define the backup directory path
 DESKTOP_DIR="$HOME/Desktop/BACKUP"
