@@ -13,8 +13,13 @@ echo "Your Start time is : $starttime"
 
 current_date=$(date +%Y-%m-%d)
 current_time=$(date +"%H:%M")
+if [[ "$startdate" > "$current_date" ]]; then
+    echo "Today is $current_date and The Time is $current_time"
+else
+    echo "Incorrect due date"
+fi
 
-echo "Today is $current_date and The Time is $current_time"
+
 
 # Define the backup directory path
 DESKTOP_DIR="$HOME/Desktop/BACKUP"
