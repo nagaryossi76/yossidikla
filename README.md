@@ -2,50 +2,78 @@
 
 # Backup Script in BASH
 
-This script allows users to create backups of a selected folder by specifying the source folder, backup destination, and automatically adding a timestamp.
+This Bash script allows users to **create a compressed backup of a chosen folder** and schedule the backup to run **daily starting from a specific date and time**.
 
-## Features
-- **User Input:** Users can specify the folder to back up and the destination directory.
-- **Automatic Timestamp:** Each backup includes a timestamp to differentiate versions.
-- **Simple File Copy:** Uses `cp` for basic copying (can be replaced with `rsync` for enhanced functionality).
+---
 
-## Installation & Usage
+Features
 
-### 1. Clone the repository (if applicable)
-```bash
-git clone <repository_url>
-cd <repository_folder>
-```
+- Prompt the user to select a folder to back up.
+- Create a `.tar.gz` compressed backup.
+- Save backups to a `BACKUP` folder on the user's Desktop.
+- Schedule automated daily backups using `cron`.
+- User-friendly prompts and error handling.
 
-### 2. Make the script executable
+---
+
+Usage
+
+### 1. Clone or copy the script:
+Save the script as `backup.sh`.
+
+### 2. Make the script executable:
 ```bash
 chmod +x backup.sh
-```
-
-### 3. Run the script
-```bash
+3. Run the script:
+bash
+Copy
+Edit
 ./backup.sh
-```
-Follow the on-screen prompts to enter the source folder and backup location.
+4. Follow the prompts:
+Enter the full path of the folder you want to back up.
 
-## Example Output
-```
-Enter the source folder to back up:
-/home/user/documents
-Enter the destination backup folder:
-/home/user/backups
-Creating backup at: /home/user/backups/backup_20250615_1413
-Backup completed successfully!
-```
+Please enter The backup path [/home/username/folder]:
+Enter the start date and time in this format:
 
-## Future Improvements
-- Implement `rsync` for more efficient backups.
-- Allow scheduling automatic backups using `cron`.
-- Validate folder paths before execution.
+Please enter The Start date (format: YYYY-MM-DD HH:MM):
+How It Works
+Verifies that the provided folder exists.
 
-## License
-This project is licensed under the MIT License.
+Creates a BACKUP directory on your Desktop (if it doesn't already exist).
 
-## Author
-Created by [Yossi&Dikla ]
+Creates a compressed .tar.gz archive with a timestamp.
+
+Schedules a daily backup using cron, starting from the specified date and time.
+
+Example
+
+Please enter The backup path [/home/username/folder]:
+/home/yossi/Documents/Projects
+
+Please enter The Start date (format: YYYY-MM-DD HH:MM):
+2025-06-20 14:00
+
+Backup successfully saved to /home/yossi/Desktop/BACKUP/backup_2025-06-17_22-30-00.tar.gz
+The backup will be performed daily starting from 2025-06-20 at 14:00.
+Notes
+This script adds a cron job that runs daily at the specified time.
+
+Make sure the full path to the script in the cron line is correct:
+
+You might need to adjust it according to your actual path.
+
+The script currently does not prevent duplicate cron jobs if run multiple times.
+
+Requirements
+Bash shell (/bin/bash)
+
+tar installed
+
+User permissions to add cron jobs (crontab)
+
+License
+This project is open-source and free to use under the MIT License.
+
+Author
+Created with by Yossi Nagar & Dikla Mogas
 
