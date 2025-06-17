@@ -45,6 +45,12 @@ else
 fi
 
 
-
+#Schedule backup every day starting from the selected date and time
 CRON_JOB="$START_MIN $START_HOUR $START_DAY $START_MONTH * /Desktop/yossidikla/backup.sh"
+
+
+#Adding the backup task to crontab
+(crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -
+
+echo "The backup will be performed daily starting from $START_DATE at $START_TIME."
 
