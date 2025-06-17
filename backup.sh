@@ -1,5 +1,4 @@
-ktop#!/bin/bash
-
+#!/bin/bash
 echo "**********Create a backup of a folder at a date and time you choose**********"
 
 # Prompt user to enter the path to backup 
