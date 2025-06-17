@@ -7,7 +7,7 @@ echo "Please enter The backup path :"
 read BACKUP_DIR
 # Check if the path exists 
 if [ ! -d "$BACKUP_DIR" ]; then
-    echo "Error, path does not exist"
+    echo "Error, path does not exist in $BACKUP_DIR"
     exit 1
 fi
 
