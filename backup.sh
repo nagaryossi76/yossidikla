@@ -3,7 +3,7 @@ ktop#!/bin/bash
 echo "**********Create a backup of a folder at a date and time you choose**********"
 
 # Prompt user to enter the path to backup 
-echo "Please enter The backup path :"
+echo "Please enter The backup path [/home/username/folder]:"
 read BACKUP_DIR
 # Check if the path exists 
 if [ ! -d "$BACKUP_DIR" ]; then
