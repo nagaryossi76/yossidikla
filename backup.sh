@@ -1,4 +1,4 @@
-#!/bin/bash
+ktop#!/bin/bash
 
 echo "**********Create a backup of a folder at a date and time you choose**********"
 
@@ -46,5 +46,5 @@ fi
 
 
 
-CRON_JOB="$START_MIN $START_HOUR $START_DAY $START_MONTH * /path/to/script.sh"
+CRON_JOB="$START_MIN $START_HOUR $START_DAY $START_MONTH * /Desktop/yossidikla/backup.sh"
 
